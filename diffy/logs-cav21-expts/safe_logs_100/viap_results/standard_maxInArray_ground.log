@@ -1,0 +1,90 @@
+int
+int
+Program Body
+{
+  int N_var;
+  int RET;
+  RET = 0;
+  int _1_PROVE[1000000];
+  N_var = __VERIFIER_nondet_int();
+  int a[N_var];
+  int max[1];
+  max[0] = 0;
+  int j;
+  j = 0;
+  while (j < N_var)
+  {
+    a[j] = __VERIFIER_nondet_int();
+    j = j + 1;
+  }
+
+  int i;
+  i = 0;
+  while (i < N_var)
+  {
+    if (a[i] > max[0])
+    {
+      max[0] = a[i];
+    }
+
+    i = i + 1;
+  }
+
+  int x;
+  x = 0;
+  while (x < N_var)
+  {
+    _1_PROVE[x] = a[x] <= max[0];
+    x = x + 1;
+  }
+
+  RET = 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:array j:int i:int max:array _1_PROVE:array RET:int x:int N_var:int}
+
+
+Output in normal notation:
+1. Frame axioms:
+a1 = a
+max1 = max
+
+2. Output equations:
+j1 = (_N1+0)
+i1 = (_N2+0)
+d1array1(_x1,_x2) = d1array7(_x1,_x2,_N3)
+main = 0
+N_var1 = __VERIFIER_nondet_int2
+x1 = (_N3+0)
+
+3. Other axioms:
+d1array2(_x1,_x2,(_n1+1)) = ite(((_x1=a) and (_x2=(_n1+0))),__VERIFIER_nondet_int3(_n1),d1array2(_x1,_x2,_n1))
+d1array2(_x1,_x2,0) = ite(((_x1=max) and (_x2=0)),0,d1array(_x1,_x2))
+(_N1>=(__VERIFIER_nondet_int2-0))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+d1array5(_x1,_x2,(_n2+1)) = ite((d1array5(a,(_n2+0),_n2)>d1array5(max,0,_n2)),ite(((_x1=max) and (_x2=0)),d1array5(a,(_n2+0),_n2),d1array5(_x1,_x2,_n2)),d1array5(_x1,_x2,_n2))
+d1array5(_x1,_x2,0) = d1array2(_x1,_x2,_N1)
+(_N2>=(__VERIFIER_nondet_int2-0))
+(_n2<_N2) -> ((_n2+0)<__VERIFIER_nondet_int2)
+d1array7(_x1,_x2,(_n3+1)) = d1array7(_x1,_x2,_n3)
+d1array7(_x1,_x2,0) = d1array5(_x1,_x2,_N2)
+(_N3>=(__VERIFIER_nondet_int2-0))
+(_n3<_N3) -> ((_n3+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+
+5. Assertion :
+(d1array7(a,(_n3+0),_N3)<=d1array7(max,0,_N3))
+Strategy applied A-1
+Failed to Prove
+Strategy applied A-2
+VIAP_STANDARD_OUTPUT_True
+FINISHED CPU 92.14 MEM 178048 MAXMEM 649468 STALE 0
+<time name="ALL">91110</time>

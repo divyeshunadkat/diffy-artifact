@@ -1,0 +1,145 @@
+int
+Program Body
+{
+  int N_var;
+  int RET;
+  RET = 0;
+  int _1_PROVE[1000000];
+  N_var = __VERIFIER_nondet_int();
+  int a[N_var];
+  int i;
+  i = 0;
+  while (i < N_var)
+  {
+    a[i] = 42;
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < N_var)
+  {
+    a[i] = 43;
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < N_var)
+  {
+    a[i] = 44;
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < N_var)
+  {
+    a[i] = 45;
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < N_var)
+  {
+    a[i] = 46;
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < N_var)
+  {
+    a[i] = 47;
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < N_var)
+  {
+    a[i] = 48;
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < N_var)
+  {
+    a[i] = 49;
+    i = i + 1;
+  }
+
+  int x;
+  x = 0;
+  while (x < N_var)
+  {
+    _1_PROVE[x] = a[x] == 49;
+    x = x + 1;
+  }
+
+  RET = 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:array i:int _1_PROVE:array RET:int x:int N_var:int}
+
+
+Output in normal notation:
+1. Frame axioms:
+a1 = a
+
+2. Output equations:
+i1 = (_N8+0)
+N_var1 = __VERIFIER_nondet_int2
+d1array1(_x1,_x2) = d1array18(_x1,_x2,_N9)
+main = 0
+x1 = (_N9+0)
+
+3. Other axioms:
+d1array2(_x1,_x2,(_n1+1)) = ite(((_x1=a) and (_x2=(_n1+0))),42,d1array2(_x1,_x2,_n1))
+d1array2(_x1,_x2,0) = d1array(_x1,_x2)
+(_N1>=(__VERIFIER_nondet_int2-0))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+d1array4(_x1,_x2,(_n2+1)) = ite(((_x1=a) and (_x2=(_n2+0))),43,d1array4(_x1,_x2,_n2))
+d1array4(_x1,_x2,0) = d1array2(_x1,_x2,_N1)
+(_N2>=(__VERIFIER_nondet_int2-0))
+(_n2<_N2) -> ((_n2+0)<__VERIFIER_nondet_int2)
+d1array6(_x1,_x2,(_n3+1)) = ite(((_x1=a) and (_x2=(_n3+0))),44,d1array6(_x1,_x2,_n3))
+d1array6(_x1,_x2,0) = d1array4(_x1,_x2,_N2)
+(_N3>=(__VERIFIER_nondet_int2-0))
+(_n3<_N3) -> ((_n3+0)<__VERIFIER_nondet_int2)
+d1array8(_x1,_x2,(_n4+1)) = ite(((_x1=a) and (_x2=(_n4+0))),45,d1array8(_x1,_x2,_n4))
+d1array8(_x1,_x2,0) = d1array6(_x1,_x2,_N3)
+(_N4>=(__VERIFIER_nondet_int2-0))
+(_n4<_N4) -> ((_n4+0)<__VERIFIER_nondet_int2)
+d1array10(_x1,_x2,(_n5+1)) = ite(((_x1=a) and (_x2=(_n5+0))),46,d1array10(_x1,_x2,_n5))
+d1array10(_x1,_x2,0) = d1array8(_x1,_x2,_N4)
+(_N5>=(__VERIFIER_nondet_int2-0))
+(_n5<_N5) -> ((_n5+0)<__VERIFIER_nondet_int2)
+d1array12(_x1,_x2,(_n6+1)) = ite(((_x1=a) and (_x2=(_n6+0))),47,d1array12(_x1,_x2,_n6))
+d1array12(_x1,_x2,0) = d1array10(_x1,_x2,_N5)
+(_N6>=(__VERIFIER_nondet_int2-0))
+(_n6<_N6) -> ((_n6+0)<__VERIFIER_nondet_int2)
+d1array14(_x1,_x2,(_n7+1)) = ite(((_x1=a) and (_x2=(_n7+0))),48,d1array14(_x1,_x2,_n7))
+d1array14(_x1,_x2,0) = d1array12(_x1,_x2,_N6)
+(_N7>=(__VERIFIER_nondet_int2-0))
+(_n7<_N7) -> ((_n7+0)<__VERIFIER_nondet_int2)
+d1array16(_x1,_x2,(_n8+1)) = ite(((_x1=a) and (_x2=(_n8+0))),49,d1array16(_x1,_x2,_n8))
+d1array16(_x1,_x2,0) = d1array14(_x1,_x2,_N7)
+(_N8>=(__VERIFIER_nondet_int2-0))
+(_n8<_N8) -> ((_n8+0)<__VERIFIER_nondet_int2)
+d1array18(_x1,_x2,(_n9+1)) = d1array18(_x1,_x2,_n9)
+d1array18(_x1,_x2,0) = d1array16(_x1,_x2,_N8)
+(_N9>=(__VERIFIER_nondet_int2-0))
+(_n9<_N9) -> ((_n9+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+
+5. Assertion :
+(d1array18(a,(_n9+0),_N9)==49)
+Strategy applied A-1
+Successfully Proved
+VIAP_STANDARD_OUTPUT_True
+FINISHED CPU 27.45 MEM 385656 MAXMEM 429176 STALE 0
+<time name="ALL">26470</time>

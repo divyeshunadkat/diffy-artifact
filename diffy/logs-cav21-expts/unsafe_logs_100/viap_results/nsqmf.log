@@ -1,0 +1,89 @@
+int
+int
+Program Body
+{
+  int N_var;
+  int RET;
+  RET = 0;
+  int _1_PROVE[1000000];
+  N_var = __VERIFIER_nondet_int();
+  if (N_var <= 0)
+  {
+    RET = 1;
+  }
+
+  if (N_var > 0)
+  {
+    int i;
+    int a[N_var];
+    int b[N_var];
+    b[0] = 1;
+    a[0] = 1;
+    i = 1;
+    while (i < N_var)
+    {
+      b[i] = b[i - 1] + 2;
+      i = i + 1;
+    }
+
+    i = 1;
+    while (i < N_var)
+    {
+      a[i] = (a[i - 1] + b[i - 1]) + 2;
+      i = i + 1;
+    }
+
+    i = 0;
+    while (i < N_var)
+    {
+      _1_PROVE[i] = a[i] == (N_var + ((i + 1) * (i + 1)));
+      i = i + 1;
+    }
+
+    RET = 1;
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:array b:array i:int _1_PROVE:array RET:int N_var:int}
+
+
+Output in normal notation:
+1. Frame axioms:
+a1 = a
+b1 = b
+
+2. Output equations:
+i1 = ite((__VERIFIER_nondet_int2>0),(_N3+0),i)
+N_var1 = __VERIFIER_nondet_int2
+d1array1(_x1,_x2) = ite((__VERIFIER_nondet_int2>0),d1array7(_x1,_x2,_N3),d1array(_x1,_x2))
+main = ite((__VERIFIER_nondet_int2>0),1,ite((__VERIFIER_nondet_int2<=0),1,0))
+
+3. Other axioms:
+d1array3(_x1,_x2,(_n1+1)) = ite(((_x1=b) and (_x2=(_n1+1))),(d1array3(b,((_n1+1)-1),_n1)+2),d1array3(_x1,_x2,_n1))
+d1array3(_x1,_x2,0) = ite(((_x1=a) and (_x2=0)),1,ite(((_x1=b) and (_x2=0)),1,d1array(_x1,_x2)))
+(_N1>=(__VERIFIER_nondet_int2-1))
+(_n1<_N1) -> ((_n1+1)<__VERIFIER_nondet_int2)
+d1array5(_x1,_x2,(_n2+1)) = ite(((_x1=a) and (_x2=(_n2+1))),((d1array5(a,((_n2+1)-1),_n2)+d1array5(b,((_n2+1)-1),_n2))+2),d1array5(_x1,_x2,_n2))
+d1array5(_x1,_x2,0) = d1array3(_x1,_x2,_N1)
+(_N2>=(__VERIFIER_nondet_int2-1))
+(_n2<_N2) -> ((_n2+1)<__VERIFIER_nondet_int2)
+d1array7(_x1,_x2,(_n3+1)) = d1array7(_x1,_x2,_n3)
+d1array7(_x1,_x2,0) = d1array5(_x1,_x2,_N2)
+(_N3>=(__VERIFIER_nondet_int2-0))
+(_n3<_N3) -> ((_n3+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+
+5. Assertion :
+(__VERIFIER_nondet_int2>0) -> (d1array7(a,(_n3+0),_N3)==(__VERIFIER_nondet_int2+(((_n3+0)+1)*((_n3+0)+1))))
+VIAP_STANDARD_OUTPUT_False
+FINISHED CPU 14.05 MEM 241760 MAXMEM 241760 STALE 0
+<time name="ALL">13890</time>

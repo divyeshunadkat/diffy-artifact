@@ -1,0 +1,42 @@
+VeriAbs
+1.4.1-12
+
+This product includes software developed by Daniel Kroening,
+Edmund Clarke,
+Computer Science Department, University of Oxford
+Computer Science Department, Carnegie Mellon University
+
+VeriAbs root: /home/divyesh/Tools/VeriAbs
+
+cp: cannot stat './*.h': No such file or directory
+VeriAbs input C file(rw): /home/divyesh/ar_abs_temp/temp_c.c
+
+
+
+***Preparing IRs for each C file...
+
+
+/home/divyesh/Tools/VeriAbs/bin/cppfe --edg-m --edg-w --edg--gcc --edg--c99 --edg--preinclude=/home/divyesh/ar_abs_temp/slice/LabtecPrefixHeader.h -O "/home/divyesh/ar_abs_temp/slice/IRs" "temp_c.c" 2>> "/home/divyesh/ar_abs_temp/slice/Logs/slice.err" 1>> "/home/divyesh/ar_abs_temp/slice/Logs/slice.log"
+
+
+IR generation completed
+Attempting IFLS -- No.
+
+
+ IR generation completed
+ Array Abstraction
+ MTS:OUT OF SCOPE
+ ARP:PROGRAM OUT OF SCOPE
+ Starting LSH Array Abstraction..
+ Examining ArrayAbstractability of temp_c
+ 
+ NOT Amenable to Array Abstraction
+ NO_AVP
+ OUTCOME temp_c -1 NA
+ 
+ Running /home/divyesh/Tools/VeriAbs/bin/vajra /home/divyesh/ar_abs_temp/temp_c.c
+ VeriAbs:VAJRA:VERIABS_VERIFICATION_SUCCESSFUL
+ 
+ witness test_d : /home/divyesh/cav21-bench/safe/witness.graphml.
+FINISHED CPU 15.84 MEM 93708 MAXMEM 13441256 STALE 0
+<time name="ALL">16390</time>

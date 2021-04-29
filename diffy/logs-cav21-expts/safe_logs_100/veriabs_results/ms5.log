@@ -1,0 +1,25 @@
+VeriAbs
+1.4.1-12
+
+This product includes software developed by Daniel Kroening,
+Edmund Clarke,
+Computer Science Department, University of Oxford
+Computer Science Department, Carnegie Mellon University
+
+VeriAbs root: /home/divyesh/Tools/VeriAbs
+
+cp: cannot stat './*.h': No such file or directory
+VeriAbs input C file(rw): /home/divyesh/ar_abs_temp/temp_c.c
+
+
+
+***Preparing IRs for each C file...
+
+
+/home/divyesh/Tools/VeriAbs/bin/cppfe --edg-m --edg-w --edg--gcc --edg--c99 --edg--preinclude=/home/divyesh/ar_abs_temp/slice/LabtecPrefixHeader.h -O "/home/divyesh/ar_abs_temp/slice/IRs" "temp_c.c" 2>> "/home/divyesh/ar_abs_temp/slice/Logs/slice.err" 1>> "/home/divyesh/ar_abs_temp/slice/Logs/slice.log"
+
+
+IR generation completed
+Attempting IFLS -- No.
+TIMEOUT CPU 100.10 MEM 13317328 MAXMEM 13334164 STALE 0
+<time name="ALL">98930</time>

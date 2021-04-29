@@ -1,0 +1,5 @@
+terminate called after throwing an instance of 'vajra::verifier_exception'
+  what():  # vajra array_ssa:: Error - Nested loops are currently not supported
+
+FINISHED CPU 0.16 MEM 220444 MAXMEM 220444 STALE 0
+<time name="ALL">160</time>

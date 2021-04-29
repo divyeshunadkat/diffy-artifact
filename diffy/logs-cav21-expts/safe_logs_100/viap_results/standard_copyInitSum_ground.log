@@ -1,0 +1,111 @@
+int
+int
+int
+Program Body
+{
+  int N_var;
+  int RET;
+  RET = 0;
+  int _1_PROVE[1000000];
+  N_var = __VERIFIER_nondet_int();
+  int a[N_var];
+  int b[N_var];
+  int incr[1];
+  incr[0] = __VERIFIER_nondet_int();
+  int i;
+  i = 0;
+  while (i < N_var)
+  {
+    a[i] = 42;
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < N_var)
+  {
+    b[i] = a[i];
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < N_var)
+  {
+    b[i] = b[i] + incr[0];
+    i = i + 1;
+  }
+
+  int x;
+  x = 0;
+  while (x < N_var)
+  {
+    _1_PROVE[x] = b[x] == (42 + incr[0]);
+    x = x + 1;
+  }
+
+  RET = 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:array incr:array b:array i:int _1_PROVE:array RET:int x:int N_var:int}
+
+
+Output in normal notation:
+1. Frame axioms:
+a1 = a
+incr1 = incr
+b1 = b
+
+2. Output equations:
+i1 = (_N3+0)
+x1 = (_N4+0)
+d1array1(_x1,_x2) = d1array8(_x1,_x2,_N4)
+main = 0
+N_var1 = __VERIFIER_nondet_int2
+
+3. Other axioms:
+d1array2(_x1,_x2,(_n1+1)) = ite(((_x1=a) and (_x2=(_n1+0))),42,d1array2(_x1,_x2,_n1))
+d1array2(_x1,_x2,0) = ite(((_x1=incr) and (_x2=0)),__VERIFIER_nondet_int3,d1array(_x1,_x2))
+(_N1>=(__VERIFIER_nondet_int2-0))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+d1array4(_x1,_x2,(_n2+1)) = ite(((_x1=b) and (_x2=(_n2+0))),d1array4(a,(_n2+0),_n2),d1array4(_x1,_x2,_n2))
+d1array4(_x1,_x2,0) = d1array2(_x1,_x2,_N1)
+(_N2>=(__VERIFIER_nondet_int2-0))
+(_n2<_N2) -> ((_n2+0)<__VERIFIER_nondet_int2)
+d1array6(_x1,_x2,(_n3+1)) = ite(((_x1=b) and (_x2=(_n3+0))),(d1array6(b,(_n3+0),_n3)+d1array6(incr,0,_n3)),d1array6(_x1,_x2,_n3))
+d1array6(_x1,_x2,0) = d1array4(_x1,_x2,_N2)
+(_N3>=(__VERIFIER_nondet_int2-0))
+(_n3<_N3) -> ((_n3+0)<__VERIFIER_nondet_int2)
+d1array8(_x1,_x2,(_n4+1)) = d1array8(_x1,_x2,_n4)
+d1array8(_x1,_x2,0) = d1array6(_x1,_x2,_N3)
+(_N4>=(__VERIFIER_nondet_int2-0))
+(_n4<_N4) -> ((_n4+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+
+5. Assertion :
+(d1array8(b,(_n4+0),_N4)==(42+d1array8(incr,0,_N4)))
+Strategy applied A-1
+Failed to Prove
+Strategy applied A-2
+Traceback (most recent call last):
+  File "/home/divyesh/Tools/viap/viap_tool.py", line 18, in <module>
+    viap_svcomp.prove_auto(filename,propertyfile)
+  File "/home/divyesh/Tools/viap/viap_svcomp.py", line 25438, in prove_auto
+    prove_auto_process(program,property,program_analysis3,program_analysis_decl)
+  File "/home/divyesh/Tools/viap/viap_svcomp.py", line 8082, in prove_auto_process
+    status=prove_assert_tactic4_update1(axiom,witnessXml)
+  File "/home/divyesh/Tools/viap/viap_svcomp.py", line 13820, in prove_assert_tactic4_update1
+    array_fun_map_temp[e_array]=expr_update_iter(new_e1[4],array_fun_map)
+  File "/home/divyesh/Tools/viap/viap_svcomp.py", line 16828, in expr_update_iter
+    return expr_update_term(copy.deepcopy(e1),parameter)
+  File "/home/divyesh/Tools/viap/viap_svcomp.py", line 16839, in expr_update_term
+    if '_x' not in parameter[count-1][0]:
+IndexError: list index out of range
+FINISHED CPU 64.66 MEM 0 MAXMEM 620888 STALE 0
+<time name="ALL">64030</time>

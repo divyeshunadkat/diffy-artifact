@@ -1,0 +1,63 @@
+int
+Program Body
+{
+  int N_var;
+  int RET;
+  RET = 0;
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE[1000000];
+  N_var = __VERIFIER_nondet_int();
+  if (N_var <= 0)
+  {
+    RET = 1;
+  }
+
+  if (N_var > 0)
+  {
+    _1_ASSUME = N_var <= (2147483647 / (sizeof(int)));
+    int i;
+    int j;
+    int a[N_var];
+    i = 0;
+    while (i < N_var)
+    {
+      a[i] = 0;
+      i = i + 1;
+    }
+
+    i = 0;
+    while (i < N_var)
+    {
+      j = 0;
+      while (j < (i + 1))
+      {
+        a[i] = a[i] + i;
+        j = j + 1;
+      }
+
+      i = i + 1;
+    }
+
+    i = 0;
+    while (i < N_var)
+    {
+      _1_PROVE[i] = a[i] == (i * (i + 1));
+      i = i + 1;
+    }
+
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:array j:int i:int _1_PROVE:array RET:int _1_ASSUME:int N_var:int}
+Unknown
+FINISHED CPU 4.72 MEM 100196 MAXMEM 100268 STALE 0
+<time name="ALL">4740</time>

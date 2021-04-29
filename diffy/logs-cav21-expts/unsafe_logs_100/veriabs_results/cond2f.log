@@ -1,0 +1,72 @@
+VeriAbs
+1.4.1-12
+
+This product includes software developed by Daniel Kroening,
+Edmund Clarke,
+Computer Science Department, University of Oxford
+Computer Science Department, Carnegie Mellon University
+
+VeriAbs root: /home/divyesh/Tools/VeriAbs
+
+cp: cannot stat './*.h': No such file or directory
+VeriAbs input C file(rw): /home/divyesh/ar_abs_temp/temp_c.c
+
+
+
+***Preparing IRs for each C file...
+
+
+/home/divyesh/Tools/VeriAbs/bin/cppfe --edg-m --edg-w --edg--gcc --edg--c99 --edg--preinclude=/home/divyesh/ar_abs_temp/slice/LabtecPrefixHeader.h -O "/home/divyesh/ar_abs_temp/slice/IRs" "temp_c.c" 2>> "/home/divyesh/ar_abs_temp/slice/Logs/slice.err" 1>> "/home/divyesh/ar_abs_temp/slice/Logs/slice.log"
+
+
+IR generation completed
+Attempting IFLS -- No.
+
+
+ IR generation completed
+ Array Abstraction
+ MTS:OUT OF SCOPE
+ ARP:PROGRAM OUT OF SCOPE
+ Starting LSH Array Abstraction..
+ Examining ArrayAbstractability of temp_c
+ YES_ARRAYABS_UND
+ Amenable to Array Abstraction
+ NO_AVP
+ Examining K-shrinkability of temp_c for K= 1
+ ** 1 of 1 failed (1 iteration)
+ VERIFICATION FAILED
+ Verification failed
+ exiting with 0
+ OUTCOME temp_c 2 UNK
+ 
+ Running /home/divyesh/Tools/VeriAbs/bin/vajra /home/divyesh/ar_abs_temp/temp_c.c
+ IR generation completed
+ Abstraction without induction + output abstraction
+ Gcc preprocessing started
+ Running on unparsed file without induction..
+ NO_TIMEOUT for cbmc call: 1536 && timeout val 120 s.
+ 
+ IR generation completed
+ Abstraction with induction + plm
+ PLM:PL: error while compilation (ESMC): Exiting
+ 
+ Gcc preprocessing started
+ Running on unparsed file with induction..
+ Running verification check by cbmc  
+ VeriAbs:BMC:VERIABS_VERIFICATION_FAILED
+ 
+ CPAC False witness:
+ 
+ generateCPACFalseWitness: started
+ Using /home/divyesh/Tools/VeriAbs/cpact/CPAchecker-1.8-unix
+ 
+ generateCPACFalseWitness: CPAC Witness Generation Command:
+ timeout -k 10s 200 scripts/cpa.sh -noout -heap 10000M -predicateAnalysis -setprop cpa.composite.aggregateBasicBlocks=false -setprop cfa.simplifyCfa=false -setprop cfa.allowBranchSwapping=false -setprop cpa.predicate.ignoreIrrelevantVariables=false -setprop counterexample.export.assumptions.assumeLinearArithmetics=true -setprop counterexample.export.assumptions.includeConstantsForPointers=false -setprop counterexample.export.graphml=violation-witness.graphml -setprop counterexample.export.compressErrorWitness=false -spec /home/divyesh/Tools/VeriAbs/supportFiles/reachsafety.prp /home/divyesh/ar_abs_temp/temp_c.c >/home/divyesh/ar_abs_temp/temp_c/Logs/cpaLog.txt 2>&1
+ generateCPACFalseWitness: witness generation time taken: 8 
+ 
+ generateCPACFalseWitness: executing gunzip output/violation-witness.graphml.gz
+ generateCPACFalseWitness: Witness : /home/divyesh/cav21-bench/unsafe/witness.graphml.
+ 
+ generateCBMCVFWitness: Returning from generateCBMCVFWitness as /home/divyesh/cav21-bench/unsafe/witness.graphml already exists
+FINISHED CPU 44.83 MEM 93696 MAXMEM 13443268 STALE 0
+<time name="ALL">43350</time>

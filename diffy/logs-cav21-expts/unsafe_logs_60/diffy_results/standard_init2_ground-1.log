@@ -1,0 +1,39 @@
+(define-fun c_9_arr () (Array Int Int)
+  ((as const (Array Int Int)) 0))
+(define-fun c_15_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 1 43))
+(define-fun c_10_arr () (Array Int Int)
+  ((as const (Array Int Int)) 0))
+(define-fun c_13_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 1 42))
+(define-fun i_4_x.010 () Int
+  0)
+(define-fun c_2_arr () (Array Int Int)
+  ((as const (Array Int Int)) 0))
+(define-fun c_8_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 0 43))
+(define-fun i_3_i.112 () Int
+  0)
+(define-fun c_3_arr () (Array Int Int)
+  ((as const (Array Int Int)) 0))
+(define-fun c_6_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 0 42))
+(define-fun i_2_i.017 () Int
+  0)
+(define-fun i_7_ret_val () Int
+  0)
+(define-fun c_14_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 1 43))
+(define-fun c_12_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 1 42))
+(define-fun i_5_ret_val () Int
+  0)
+(define-fun c_7_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 0 43))
+(define-fun c_5_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 0 42))
+
+DIFFY_VERIFICATION_FAILED
+
+FINISHED CPU 0.10 MEM 220540 MAXMEM 220540 STALE 0
+<time name="ALL">130</time>

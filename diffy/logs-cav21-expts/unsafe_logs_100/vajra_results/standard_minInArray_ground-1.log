@@ -1,0 +1,49 @@
+(define-fun c_18_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 11) 1 7681))
+(define-fun c_8_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 10) 0 0))
+(define-fun c_17_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 11) 1 7681))
+(define-fun c_2_arr () (Array Int Int)
+  ((as const (Array Int Int)) 8))
+(define-fun i_2_j.025 () Int
+  0)
+(define-fun c_7_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 10) 0 0))
+(define-fun c_10_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 8) 0 0))
+(define-fun c_15_arr () (Array Int Int)
+  ((as const (Array Int Int)) 11))
+(define-fun i_5_x.018 () Int
+  0)
+(define-fun c_4_arr () (Array Int Int)
+  ((as const (Array Int Int)) 10))
+(define-fun c_6_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 7) 0 0))
+(define-fun c_19_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 9) 0 7681))
+(define-fun c_13_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 9) 0 (- 38)))
+(define-fun c_11_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 8) 0 0))
+(define-fun c_20_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 9) 0 (- 38)))
+(define-fun c_12_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 8) 0 0))
+(define-fun c_3_arr () (Array Int Int)
+  ((as const (Array Int Int)) 7))
+(define-fun i_4_i.020 () Int
+  0)
+(define-fun c_9_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 8) 0 0))
+(define-fun c_21_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 9) 0 (- 38)))
+(define-fun i_9_ret_val () Int
+  0)
+(define-fun i_6_ret_val () Int
+  0)
+
+VAJRA_VERIFICATION_FAILED
+
+FINISHED CPU 0.10 MEM 220212 MAXMEM 220212 STALE 0
+<time name="ALL">130</time>

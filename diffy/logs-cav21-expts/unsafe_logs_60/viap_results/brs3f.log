@@ -1,0 +1,99 @@
+/home/divyesh/Tools/viap/input_program2.c: In function ‘main’:
+/home/divyesh/Tools/viap/input_program2.c:136:12: warning: unknown conversion type character ‘)’ in format [-Wformat=]
+     printf("IfCondition1:(i % 3) == 0:26:%d\n", _con_flag3);
+            ^
+/home/divyesh/Tools/viap/input_program2.c:139:14: warning: unknown conversion type character ‘)’ in format [-Wformat=]
+       printf("IfCondition2:(i % 3) == 0:26:%d\n", _con_flag3);
+              ^
+int
+int
+Program Body
+{
+  int N_var;
+  int RET;
+  RET = 0;
+  int _1_PROVE = 0;
+  N_var = __VERIFIER_nondet_int();
+  if (N_var <= 0)
+  {
+    RET = 1;
+  }
+
+  if (N_var > 0)
+  {
+    int i;
+    int sum[1];
+    int a[N_var];
+    i = 0;
+    while (i < N_var)
+    {
+      if ((i % 3) == 0)
+      {
+        a[i] = 3;
+      }
+      else
+      {
+        a[i] = 30;
+      }
+
+      i = i + 1;
+    }
+
+    i = 0;
+    while (i < N_var)
+    {
+      if (i == 0)
+      {
+        sum[0] = 0;
+      }
+      else
+      {
+        sum[0] = sum[0] + a[i];
+      }
+
+      i = i + 1;
+    }
+
+    _1_PROVE = sum[0] <= (3 * N_var);
+    RET = 1;
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:array i:int sum:array _1_PROVE:int RET:int N_var:int}
+
+Output in normal notation:
+1. Frame axioms:
+a1 = a
+sum1 = sum
+
+2. Output equations:
+i1 = ite((__VERIFIER_nondet_int2>0),(_N2+0),i)
+N_var1 = __VERIFIER_nondet_int2
+d1array1(_x1,_x2) = ite((__VERIFIER_nondet_int2>0),d1array9(_x1,_x2,_N2),d1array(_x1,_x2))
+main = ite((__VERIFIER_nondet_int2>0),1,ite((__VERIFIER_nondet_int2<=0),1,0))
+
+3. Other axioms:
+d1array5(_x1,_x2,(_n1+1)) = ite((((_n1+0)%3)==0),ite(((_x1=a) and (_x2=(_n1+0))),3,d1array5(_x1,_x2,_n1)),ite(((_x1=a) and (_x2=(_n1+0))),30,d1array5(_x1,_x2,_n1)))
+d1array5(_x1,_x2,0) = d1array(_x1,_x2)
+(_N1>=(__VERIFIER_nondet_int2-0))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+d1array9(_x1,_x2,(_n2+1)) = ite(((_n2+0)==0),ite(((_x1=sum) and (_x2=0)),0,d1array9(_x1,_x2,_n2)),ite(((_x1=sum) and (_x2=0)),(d1array9(sum,0,_n2)+d1array9(a,(_n2+0),_n2)),d1array9(_x1,_x2,_n2)))
+d1array9(_x1,_x2,0) = d1array5(_x1,_x2,_N1)
+(_N2>=(__VERIFIER_nondet_int2-0))
+(_n2<_N2) -> ((_n2+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+
+5. Assertion :
+ite((__VERIFIER_nondet_int2>0),(d1array9(sum,0,_N2)<=(3*__VERIFIER_nondet_int2)),0)
+VIAP_STANDARD_OUTPUT_False
+FINISHED CPU 14.79 MEM 367788 MAXMEM 367788 STALE 0
+<time name="ALL">14640</time>

@@ -1,0 +1,24 @@
+(define-fun c_6_arr () (Array Int Int)
+  ((as const (Array Int Int)) 0))
+(define-fun c_9_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 1 42))
+(define-fun i_3_x.06 () Int
+  0)
+(define-fun c_2_arr () (Array Int Int)
+  ((as const (Array Int Int)) 0))
+(define-fun c_5_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 0 42))
+(define-fun i_2_i.08 () Int
+  0)
+(define-fun i_6_ret_val () Int
+  0)
+(define-fun c_8_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 1 42))
+(define-fun i_4_ret_val () Int
+  0)
+(define-fun c_4_arr () (Array Int Int)
+  (store ((as const (Array Int Int)) 0) 0 42))
+
+DIFFY_VERIFICATION_FAILED
+
+FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0

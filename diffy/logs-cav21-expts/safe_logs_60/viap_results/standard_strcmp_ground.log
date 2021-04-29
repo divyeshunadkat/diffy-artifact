@@ -1,0 +1,91 @@
+int
+int
+int
+Program Body
+{
+  int N_var;
+  int RET;
+  RET = 0;
+  int _1_PROVE[1000000];
+  N_var = __VERIFIER_nondet_int();
+  int i;
+  int a[N_var];
+  int b[N_var];
+  int c[1];
+  i = 0;
+  while (i < N_var)
+  {
+    a[i] = __VERIFIER_nondet_int();
+    b[i] = __VERIFIER_nondet_int();
+    i = i + 1;
+  }
+
+  c[0] = 0;
+  i = 0;
+  while (i < N_var)
+  {
+    if (a[i] != b[i])
+    {
+      c[0] = 1;
+    }
+
+    i = i + 1;
+  }
+
+  int x;
+  x = 0;
+  while (x < N_var)
+  {
+    _1_PROVE[x] = (c[0] == 1) || (a[x] == b[x]);
+    x = x + 1;
+  }
+
+  RET = 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:array c:array b:array i:int _1_PROVE:array RET:int x:int N_var:int}
+
+
+Output in normal notation:
+1. Frame axioms:
+a1 = a
+c1 = c
+b1 = b
+
+2. Output equations:
+i1 = (_N2+0)
+x1 = (_N3+0)
+d1array1(_x1,_x2) = d1array8(_x1,_x2,_N3)
+main = 0
+N_var1 = __VERIFIER_nondet_int2
+
+3. Other axioms:
+d1array3(_x1,_x2,(_n1+1)) = ite(((_x1=b) and (_x2=(_n1+0))),__VERIFIER_nondet_int4(_n1),ite(((_x1=a) and (_x2=(_n1+0))),__VERIFIER_nondet_int3(_n1),d1array3(_x1,_x2,_n1)))
+d1array3(_x1,_x2,0) = d1array(_x1,_x2)
+(_N1>=(__VERIFIER_nondet_int2-0))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+d1array6(_x1,_x2,(_n2+1)) = ite((d1array6(a,(_n2+0),_n2)!=d1array6(b,(_n2+0),_n2)),ite(((_x1=c) and (_x2=0)),1,d1array6(_x1,_x2,_n2)),d1array6(_x1,_x2,_n2))
+d1array6(_x1,_x2,0) = ite(((_x1=c) and (_x2=0)),0,d1array3(_x1,_x2,_N1))
+(_N2>=(__VERIFIER_nondet_int2-0))
+(_n2<_N2) -> ((_n2+0)<__VERIFIER_nondet_int2)
+d1array8(_x1,_x2,(_n3+1)) = d1array8(_x1,_x2,_n3)
+d1array8(_x1,_x2,0) = d1array6(_x1,_x2,_N2)
+(_N3>=(__VERIFIER_nondet_int2-0))
+(_n3<_N3) -> ((_n3+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+
+5. Assertion :
+((d1array8(c,0,_N3)==1) or (d1array8(a,(_n3+0),_N3)==d1array8(b,(_n3+0),_N3)))
+Strategy applied A-1
+Successfully Proved
+VIAP_STANDARD_OUTPUT_True
+FINISHED CPU 17.58 MEM 335080 MAXMEM 422484 STALE 0
+<time name="ALL">16850</time>

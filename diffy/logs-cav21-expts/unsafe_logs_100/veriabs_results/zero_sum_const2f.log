@@ -1,0 +1,48 @@
+VeriAbs
+1.4.1-12
+
+This product includes software developed by Daniel Kroening,
+Edmund Clarke,
+Computer Science Department, University of Oxford
+Computer Science Department, Carnegie Mellon University
+
+VeriAbs root: /home/divyesh/Tools/VeriAbs
+
+cp: cannot stat './*.h': No such file or directory
+VeriAbs input C file(rw): /home/divyesh/ar_abs_temp/temp_c.c
+
+
+
+***Preparing IRs for each C file...
+
+
+/home/divyesh/Tools/VeriAbs/bin/cppfe --edg-m --edg-w --edg--gcc --edg--c99 --edg--preinclude=/home/divyesh/ar_abs_temp/slice/LabtecPrefixHeader.h -O "/home/divyesh/ar_abs_temp/slice/IRs" "temp_c.c" 2>> "/home/divyesh/ar_abs_temp/slice/Logs/slice.err" 1>> "/home/divyesh/ar_abs_temp/slice/Logs/slice.log"
+
+
+IR generation completed
+Attempting IFLS -- No.
+/usr/local/lib/python2.7/dist-packages/sklearn/base.py:311: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.20.0 when using version 0.19.2. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+
+
+ IR generation completed
+ Array Abstraction
+ MTS:OUT OF SCOPE
+ ARP:PROGRAM OUT OF SCOPE
+ Starting LSH Array Abstraction..
+ Examining ArrayAbstractability of temp_c
+ 
+ NOT Amenable to Array Abstraction
+ NO_AVP
+ OUTCOME temp_c -1 NA
+ 
+ Running /home/divyesh/Tools/VeriAbs/bin/vajra /home/divyesh/ar_abs_temp/temp_c.c
+ VeriAbs:VAJRA:VERIABS_VERIFICATION_FAILED
+ 
+ AFL Run COMMAND:
+ timeout -k 2s 745 /home/divyesh/Tools/VeriAbs/verifuzz/scripts/verifuzz.py --debug 1 --propertyFile /home/divyesh/Tools/VeriAbs/supportFiles/reachsafety.prp /home/divyesh/ar_abs_temp/temp_c.c > /home/divyesh/ar_abs_temp/temp_c/Logs/verifuzzop.txt
+ VeriFuzz_UNKNOWN
+ 
+ witness test_d : /home/divyesh/cav21-bench/unsafe/witness.graphml.
+FINISHED CPU 21.36 MEM 93676 MAXMEM 13310120 STALE 0
+<time name="ALL">19450</time>
